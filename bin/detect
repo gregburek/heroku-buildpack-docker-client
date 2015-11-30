@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -f $1/.docker_url ] && [ -f $1/.docker_machine_url; then
+if [ -f $1/.docker_url ] && [ -f $1/.docker_machine_url ]; then
     echo "DockerBinaries"
     exit 0
 else
