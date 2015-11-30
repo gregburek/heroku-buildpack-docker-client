@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ -f $1/.packer_url ]; then
-    echo "PackerBinaries"
+if [ -f $1/.docker_url ] && [ -f $1/.docker_machine_url; then
+    echo "DockerBinaries"
     exit 0
 else
     exit 1

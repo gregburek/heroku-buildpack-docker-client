@@ -1,4 +1,4 @@
-heroku-buildpack-packer
+heroku-buildpack-docker-client
 =======================
 
-A buildpack to install packer on a heroku instance
+A buildpack to install docker and docker-machine binaries on a heroku dyno
