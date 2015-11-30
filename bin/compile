@@ -28,7 +28,7 @@ chmod +x $1/bin/docker
 
 echo "Vendoring $machine_url" | indent
 curl -L --silent --fail --retry 3 "$url" > "$1/bin/docker-machine"
-chmod +x $1/bin/docker_machine
+chmod +x $1/bin/docker-machine
 
 mkdir -p .profile.d
 echo 'export PATH="$HOME/bin:$PATH"' > .profile.d/packer.sh
