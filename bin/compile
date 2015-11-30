@@ -22,6 +22,15 @@ if [ -z "$url" ]; then
     exit 0
 fi
 
+if which unzip >/dev/null; then
+    unpack_command="unzip"
+elif which jar >/dev/null; then
+    unpack_command="jar xf"
+else
+    echo "Need unzip or jar available to unpack." >&2
+    exit 1
+fi
+
 echo "Vendoring $url" | indent
 curl -L --silent --fail --retry 3 "$url" > "$1/bin/docker"
 chmod +x $1/bin/docker
